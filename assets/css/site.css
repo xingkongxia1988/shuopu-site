@@ -72,6 +72,12 @@
   --rh-2: 88px;
   --rh-3: 64px;
 
+/* 字阶（vision 页引入，随全站字阶体系演进） */
+  --fs-display-sans: clamp(34px, 4.6vw, 58px);
+  --fs-h2-sans: 30px;
+  --fs-body: 14px;
+  --fs-label-mono: 12px;
+
   /* ---- 动效 ---- */
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
   --t-fast: 0.24s;
@@ -1677,6 +1683,52 @@ button.chip.on { border-color: var(--amber); color: var(--amber-2); background: 
   .dash-kpi:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
   .dash-body { grid-template-columns: 1fr; }
   .dash-left { border-right: 0; border-bottom: 1px solid var(--line); }
+  /* 导航移动端留白（接入第 6 项后 7 项挤满视口，收紧上下留白；触摸目标仍 44px） */
+.nav-links.open { padding: 14px var(--pad) 14px; }
+  .nav-links.open a { padding: 8px 0; }
+  .nav-mobile-cta { padding-top: 10px !important; }
+
+  /* 愿景页 · 窄屏（必须置于本块末尾，否则被下方同特异度规则覆盖） */
+/* 覆写 site.css:1645 `.tbl { min-width: 580px }` —— 这是移动端横滚的根源 */
+  .sheet .vision-tbl { border-collapse: separate; min-width: 0; width: 100%; }
+  .sheet .vision-tbl col,
+  .sheet .vision-tbl colgroup { display: none; }
+  /* P0-2：表头不能被 display:none 消灭 —— 视觉隐藏但保留在 AX 树，
+     否则窄屏下 AT 读每一行听不出字段名（位/状态/这个位置是什么/官网对应）。 */
+  .sheet .vision-tbl thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+  .sheet .vision-tbl thead tr { display: block; }
+  .sheet .vision-tbl thead th { display: block; }
+  .sheet .vision-tbl tbody { display: block; }
+  .sheet .vision-tbl tr {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 6px 12px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--paper-line);
+  }
+  .sheet .vision-tbl td { display: block; padding: 0; border-bottom: 0; }
+  .sheet .vision-tbl td:first-child { grid-column: 1; grid-row: 1; }
+  .sheet .vision-tbl td:nth-child(2) { grid-column: 2; grid-row: 1; justify-self: end; }
+  .sheet .vision-tbl td:nth-child(3) { grid-column: 1 / -1; grid-row: 2; }
+  .sheet .vision-tbl td:nth-child(4) { grid-column: 1 / -1; grid-row: 3; }
+  .sheet .vision-tbl tbody tr:last-child td { border-bottom: 0; }
+  .sheet .vision-tbl tbody tr:hover td { background: transparent; }
+  .sheet .vision-tbl .v-tbl-label {
+    display: inline;
+    margin-right: 8px;
+    color: var(--paper-ink-2);
+  }
+
 }
 
 @media (max-width: 400px) {
@@ -1701,3 +1753,171 @@ button.chip.on { border-color: var(--amber); color: var(--amber-2); background: 
   }
   .js .rv { opacity: 1; transform: none; }
 }
+
+/* ============================================================
+   愿景页（vision.html）· 组件层覆写
+   —— 置于文件末尾：本页覆写必须晚于被覆写的既有规则（.flowline i 等）
+   ============================================================ */
+/* —— 基础层：新增字阶原值（对齐 tokens.json type.scale；不新增任何颜色）—— */
+
+/* —— 站点全局覆写（移动端导航 · 落盘到 site.css，非本页私有）——
+   问题 3：390px 下 .nav-links.open 展开总高实测 490px（top 68 + menu 422）> 视口 50%(422px)。
+   实测基准：每导航项高 56px（padding 14+14 + line-height 27 + border 1）、CTA 高 53px。
+   修法：只压缩「空白」，不改字号(15px)、不改 line-height(1.8)、不隐藏任何导航项。
+     · .nav-links.open a  padding 14px → 8px   → 每项 56 → 44px
+     · 面板 padding       20/30 → 14/14
+     · CTA padding-top    22  → 10
+   触摸目标：44px = Apple HIG 44px 建议值，达标不打折。
+   计算：14(上) + 6×44(6 项) + 10(CTA 上边距) + 27(CTA 行高) + 14(CTA 下边距) + 14(下) + 68(--nav-h)
+        = 413px ≤ 422px（余 9px）✅
+   影响面：仅移动端展开菜单的留白与行内 padding，桌面端不受影响（全在 max-width:860px 内）。 */
+
+
+/* —— 组件层：愿景页 —— */
+
+/* 窄屏（≤860px）坐标册改卡片块：方向甲，彻底取消横向滚动 */
+
+/* 本页统一中文正文 14px（站内有 12.5 / 13 / 13.5px 的中文，此页不继承） */
+.vision-page .note { font-size: var(--fs-body); line-height: 1.9; }
+.vision-page .lead { max-width: 620px; }
+.vision-page .chain .small { font-size: var(--fs-label-mono); letter-spacing: 0.08em; }
+.vision-page .card .idx {                          /* 14px 中文，不进 10.5px mono 小字阶 */
+  font-family: var(--sans);
+  font-size: var(--fs-body);
+  letter-spacing: 0;
+  color: var(--muted);          /* 6.9:1，不用 --muted-2(5.5:1) */
+}
+.vision-page .fitem .n { font-size: var(--fs-body); letter-spacing: 0.08em; color: var(--muted); font-family: var(--mono); }
+.vision-page .fitem h3 small { font-size: var(--fs-body); letter-spacing: 0.08em; color: var(--muted); font-family: var(--mono); }
+.vision-page .phero::after { display: none; }       /* 本页不用琥珀光晕：琥珀只留两处，见方案 6.3 */
+
+.vision-title {
+  font-family: var(--sans);
+  font-size: var(--fs-display-sans);
+  line-height: 1.26;
+  letter-spacing: 0;
+  font-weight: 500;
+  max-width: 16em;
+  text-wrap: balance;
+}
+.vision-h2 {
+  font-family: var(--sans);
+  font-size: var(--fs-h2-sans);
+  line-height: 1.34;
+  letter-spacing: 0;
+  font-weight: 500;
+  max-width: 22em;
+}
+.sheet .vision-h2--serif { font-family: var(--serif); font-weight: 400; }   /* 衬线仅允许出现在 .sheet 内 */
+
+.vision-sec-mark {
+  font-family: var(--mono);
+  font-size: var(--fs-body);
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.vision-line { font-size: var(--fs-body); letter-spacing: 0; gap: 10px; }
+.vision-line i { color: var(--text-2); }            /* 覆写 .flowline i 的琥珀箭头 */
+.vslot {
+  font-family: var(--mono);
+  font-size: var(--fs-label-mono);
+  letter-spacing: 0.08em;
+  color: var(--text);
+  border: 1px solid var(--line-3);
+  padding: 4px 9px;
+  white-space: nowrap;
+}
+.vslot--open { color: var(--muted); border-color: var(--line-2); }
+.vstate { font-size: var(--fs-body); color: var(--muted); letter-spacing: 0; }
+.vstate a { color: var(--text-2); border-bottom: 1px solid var(--line-2); }
+.vstate a:hover, .vstate a:focus-visible { color: var(--text); border-bottom-color: var(--line-3); }
+
+.sheet .vision-tbl th {
+  font-size: var(--fs-body);          /* 覆写 site.css:1402 的 10.5px */
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 500;
+  color: var(--paper-ink-2);
+}
+.sheet .vision-tbl td { font-size: var(--fs-body); line-height: 1.7; }
+.sheet .vision-tbl td:first-child {
+  font-family: var(--mono);
+  font-size: var(--fs-body);          /* 14px，与正文同阶 */
+  letter-spacing: 0.08em;
+}
+.v-tbl-label { display: none; }
+.sheet .vision-tbl a { color: var(--paper-ink); border-bottom: 1px solid var(--paper-line-2); }
+.sheet .vision-tbl a:hover, .sheet .vision-tbl a:focus-visible { border-bottom-color: var(--paper-ink); }
+.vision-sheet .tbl .no { color: var(--paper-ink-2); }   /* 裁决四：--paper-ink-3(5.1:1) → --paper-ink-2(10.3:1) */
+
+.vision-sheet .sheet-head .sl { color: var(--paper-ink-2); }   /* 本页覆写：册页号也是本页新写内容，提到 10.3:1 */
+.vision-sheet .tbl-legend { font-size: var(--fs-body); color: var(--paper-ink-2); }
+.vision-sheet .tbl-legend b { color: var(--paper-ink-2); font-weight: 500; }
+.vision-bridge {
+  font-size: var(--fs-body);
+  line-height: 1.9;
+  color: var(--paper-ink-2);
+  max-width: 620px;
+  margin: 0 0 26px;
+}
+.vision-footnote {
+  font-size: var(--fs-body);
+  line-height: 1.9;
+  color: var(--paper-ink-2);
+  margin: 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--paper-line-2);
+}
+.sheet .vision-quote {
+  font-family: var(--serif);
+  font-size: var(--fs-body);
+  line-height: 1.7;
+  color: var(--paper-ink);
+  border-left: 1px solid var(--paper-line-2);
+  padding: 4px 0 4px 22px;
+  margin: 0;
+}
+
+/* P0-1：卡容器改 div 后，主链接 a.card-main 只包主要内容。
+   点击热区由 ::after 铺满整卡（.card 已有 position:relative，见 site.css:558），
+   这样「整卡可点」的体感不变，同时 TRACE 可以作为兄弟元素留在卡内。 */
+.card-main { position: static; display: block; }
+.card-main::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+.card:focus-within { border-color: rgba(221, 164, 92, 0.34); }
+.card-note {
+  font-size: var(--fs-body);
+  line-height: 1.85;
+  color: var(--muted);
+  margin: 14px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  position: relative;
+  z-index: 2;   /* 压在 ::after 热区之上，保证补注可选中 */
+}
+/* 段 02 的 M 位显文：h2 之后、表格之前（P1-3，把不可替换的事实提到台前） */
+.vision-lede {
+  font-size: var(--fs-body);
+  line-height: 1.9;
+  color: var(--paper-ink-2);
+}
+
+/* P1-1：段 03 末的下一步锚点（把「接口位」兑现成一条真实路径） */
+.vision-next {
+  font-size: var(--fs-body);
+  line-height: 1.9;
+  color: var(--muted);
+  max-width: 620px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.vision-next a { color: var(--text-2); border-bottom: 1px solid var(--line-2); }
+.vision-next a:hover, .vision-next a:focus-visible { color: var(--text); border-bottom-color: var(--line-3); }
+
+.nw { white-space: nowrap; }
+.trace { font-family: var(--mono); font-size: var(--fs-body); letter-spacing: 0.08em; }
+.trace a { color: var(--amber); }
+/* P1-5（WCAG 2.5.8）：块级 trace 链接实测高 16px < 24px，不适用行内豁免。
+   用 inline-block + padding-block 撑到 ≥24px，不改变视觉密度与字阶。 */
+.trace { display: inline-block; padding-block: 5px; position: relative; z-index: 2; }
+.trace a { display: inline-block; padding-block: 5px; }
