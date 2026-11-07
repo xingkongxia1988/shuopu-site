@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" width="320" height="64" role="img" aria-label="烁普智能 SHUOPU INTELLIGENCE">
+  <title>烁普智能 · 横向组合</title>
+  <g transform="translate(0 10) scale(0.6875)">
+    <g transform="translate(-5.75 -5)">
+      <path d="M47 17L29 17A8 8 0 0 0 21 25L21 29A8 8 0 0 0 29 37L35 37A8 8 0 0 1 43 45L43 49A8 8 0 0 1 35 57L17 57"
+            fill="none" stroke="#EFEBE2" stroke-width="8" stroke-linecap="round"/>
+      <circle cx="57" cy="57" r="5.5" fill="#DDA45C"/>
+    </g>
+  </g>
+  <text x="57" y="33" fill="#EFEBE2" font-family="Inter, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif"
+        font-size="23" font-weight="500" letter-spacing="3.5">烁普智能</text>
+  <text x="58" y="48" fill="#909BA8" font-family="'SF Mono', 'JetBrains Mono', Menlo, monospace"
+        font-size="8.5" letter-spacing="2.4">SHUOPU INTELLIGENCE</text>
+</svg>

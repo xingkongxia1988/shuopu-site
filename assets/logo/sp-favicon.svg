@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="烁普智能">
+  <title>烁普智能 · 应用图标</title>
+  <rect width="64" height="64" rx="14" fill="#060B11"/>
+  <g transform="translate(32 32) scale(0.74) translate(-37.75 -37)" fill="none" stroke="#DDA45C" stroke-width="8" stroke-linecap="round">
+    <path d="M47 17L29 17A8 8 0 0 0 21 25L21 29A8 8 0 0 0 29 37L35 37A8 8 0 0 1 43 45L43 49A8 8 0 0 1 35 57L17 57"/>
+    <circle cx="57" cy="57" r="5.5" fill="#DDA45C" stroke="none"/>
+  </g>
+</svg>

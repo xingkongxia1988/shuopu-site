@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>《上升的螺旋》 · 组织内人机协同 · Rhea 双螺旋短片 · 烁普智能</title>
+<meta name="description" content="Rhea 双螺旋短片：组织内人与 Agent 如何渐进式授权、螺旋式上升——每跑通一轮，人站得更高，AI 潜得更深，组织家底更厚。影片制作中，先看分镜精选。">
+<style>
+  :root{--bg:#141311;--ink:#e8e4da;--ink2:#b8b2a6;--line:#3a372f;--accent:#7d96ec;--gold:#d4a94e;--amber:#e8890c}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.8;font-size:15px}
+  .bar{background:#0d0c0b;font-size:13px;padding:10px 20px;display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+  .bar a{color:var(--ink2);text-decoration:none}.bar a:hover{color:var(--accent)}
+  .bar span{opacity:.75}
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px 90px}
+  h1{font-size:32px;margin:46px 0 8px;text-align:center;letter-spacing:.02em}
+  .sub{text-align:center;color:var(--ink2);font-size:15.5px}
+  .meta{text-align:center;font-size:12.5px;color:#8a857c;margin:10px 0 34px;letter-spacing:.14em}
+  .poster{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;background:
+    radial-gradient(1200px 400px at 50% 120%, rgba(125,150,236,.16), transparent 60%),
+    radial-gradient(800px 300px at 50% -10%, rgba(212,169,78,.12), transparent 55%), #191714}
+  .play{width:84px;height:84px;border-radius:50%;border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;opacity:.92;cursor:pointer}
+  .play svg{margin-left:5px}
+  .poster .cap{position:absolute;bottom:18px;left:0;right:0;text-align:center;font-size:12.5px;color:var(--ink2)}
+  .badge{position:absolute;top:16px;right:16px;font-size:11px;font-weight:700;letter-spacing:.12em;padding:4px 12px;border-radius:999px;background:rgba(232,137,12,.14);color:var(--amber);border:1px solid rgba(232,137,12,.4)}
+  h2{font-size:19px;margin:52px 0 6px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+  p{margin:9px 0;color:var(--ink2)} p b{color:var(--ink)}
+  .story{background:#191714;border:1px solid var(--line);border-radius:14px;padding:20px 24px;margin:14px 0}
+  .frame{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
+  @media(max-width:720px){.frame{grid-template-columns:1fr}}
+  .shot{background:#191714;border:1px solid var(--line);border-radius:12px;padding:14px 15px}
+  .shot .no{font-size:11px;letter-spacing:.16em;color:var(--gold)}
+  .shot h3{font-size:14.5px;margin:5px 0 6px;color:var(--ink)}
+  .shot p{font-size:12.8px;line-height:1.7}
+  .quoteline{border-left:3px solid var(--gold);padding:10px 16px;margin:16px 0;color:var(--ink);background:rgba(212,169,78,.07);border-radius:0 10px 10px 0;font-size:14.5px}
+  .actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:44px}
+  .btn{display:inline-block;padding:11px 22px;border-radius:10px;text-decoration:none;font-size:14px;font-weight:600}
+  .btn--solid{background:var(--accent);color:#14161c}
+  .btn--ghost{border:1px solid var(--line);color:var(--ink)}
+  
+  /* ── 动态分镜（概念初稿 · SVG 动画）── */
+  @keyframes rise { 0%{transform:translateY(6px)} 100%{transform:translateY(-8px)} }
+  @keyframes rungLight { 0%{fill:#DDA45C;opacity:.9} 55%{fill:#8CA173} 100%{fill:#74A9A2;opacity:.95} }
+  @keyframes breathe { 0%,100%{stroke-width:2.2;opacity:.85} 50%{stroke-width:3;opacity:1} }
+  @keyframes topGlow { 0%,100%{opacity:.5;r:5} 50%{opacity:1;r:7} }
+  @keyframes spark { 0%,100%{opacity:0} 40%{opacity:1} 60%{opacity:0} }
+  .anim-rise{animation:rise 9s ease-in-out infinite alternate}
+  .anim-breath{animation:breathe 4.5s ease-in-out infinite}
+  .anim-top{animation:topGlow 2.8s ease-in-out infinite}
+  .anim-spark{animation:spark 2.6s ease-in-out infinite}
+  .rungA{animation:rungLight 7s ease-in-out infinite}
+  @media (prefers-reduced-motion: reduce){ .anim-rise,.anim-breath,.anim-top,.anim-spark,.rungA{animation:none !important} }
+
+  footer{margin-top:70px;text-align:center;color:#8a857c;font-size:12.5px;border-top:1px solid var(--line);padding-top:22px}
+</style>
+</head>
+<body>
+<div class="bar">
+  <a href="index.html">烁普智能</a><span>/</span>
+  <a href="rhea.html">Rhea 产品页</a><span>/</span>
+  <a href="helix.html">螺旋图解</a><span>/</span>
+  <span>双螺旋短片</span>
+</div>
+<div class="wrap">
+
+<h1>上升的螺旋</h1>
+<p class="sub">Rhea 双螺旋 —— 组织内人与 Agent 的渐进式协同</p>
+<div class="meta">STATUS: IN PRODUCTION · 影片制作中 · 先看分镜精选</div>
+
+<div class="poster" role="img" aria-label="动态分镜：赭青双链螺旋缠绕上升，横档逐个由人审赭色点亮为 AI 把关青色，顶端光点脉动">
+  <div class="badge">概念初稿 · SVG 动态分镜</div>
+  <svg viewBox="0 0 960 540" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0">
+    <defs><radialGradient id="hg" cx="50%" cy="0%" r="90%"><stop offset="0" stop-color="#d4a94e" stop-opacity=".15"/><stop offset="1" stop-color="transparent"/></radialGradient>
+    <radialGradient id="hg2" cx="50%" cy="100%" r="80%"><stop offset="0" stop-color="#74A9A2" stop-opacity=".12"/><stop offset="1" stop-color="transparent"/></radialGradient></defs>
+    <rect width="960" height="540" fill="url(#hg)"/><rect width="960" height="540" fill="url(#hg2)"/>
+    <g class="anim-rise">
+      <path class="anim-breath" d="M100 460 C 160 460, 170 300, 230 300 S 300 460, 360 460 S 430 140, 490 140 S 560 460, 620 460 S 690 300, 750 300 S 820 460, 880 460" stroke="#DDA45C" stroke-width="2.4" fill="none" opacity=".9"/>
+      <path class="anim-breath" d="M100 300 C 160 300, 170 460, 230 460 S 300 300, 360 300 S 430 460, 490 460 S 560 300, 620 300 S 690 460, 750 460 S 820 300, 880 300" stroke="#74A9A2" stroke-width="2.4" fill="none" opacity=".9" style="animation-delay:.8s"/>
+      <rect class="rungA" x="88" y="256" width="104" height="16" rx="8" style="animation-delay:0.0s"/><rect class="rungA" x="208" y="256" width="104" height="16" rx="8" style="animation-delay:0.9s"/><rect class="rungA" x="328" y="256" width="104" height="16" rx="8" style="animation-delay:1.8s"/><rect class="rungA" x="448" y="256" width="104" height="16" rx="8" style="animation-delay:2.7s"/><rect class="rungA" x="568" y="256" width="104" height="16" rx="8" style="animation-delay:3.6s"/><rect class="rungA" x="688" y="256" width="104" height="16" rx="8" style="animation-delay:4.5s"/><rect class="rungA" x="808" y="256" width="104" height="16" rx="8" style="animation-delay:5.4s"/>
+      <circle class="anim-top" cx="490" cy="140" fill="#d4a94e"/>
+      <circle cx="490" cy="140" r="14" fill="none" stroke="#d4a94e" stroke-opacity=".4"/>
+    </g>
+    <circle class="anim-spark" cx="120" cy="180" r="2.2" fill="#d4a94e" style="animation-delay:0.0s"/><circle class="anim-spark" cx="240" cy="247" r="2.2" fill="#d4a94e" style="animation-delay:0.8s"/><circle class="anim-spark" cx="360" cy="314" r="2.2" fill="#d4a94e" style="animation-delay:1.6s"/><circle class="anim-spark" cx="480" cy="221" r="2.2" fill="#d4a94e" style="animation-delay:2.4s"/><circle class="anim-spark" cx="600" cy="288" r="2.2" fill="#d4a94e" style="animation-delay:0.6s"/><circle class="anim-spark" cx="720" cy="195" r="2.2" fill="#d4a94e" style="animation-delay:1.4s"/><circle class="anim-spark" cx="840" cy="262" r="2.2" fill="#d4a94e" style="animation-delay:2.2s"/>
+    <g font-size="12.5" fill="#8a857c" text-anchor="middle"><text x="140" y="500">G1</text><text x="260" y="500">G2</text><text x="380" y="500">G3</text><text x="500" y="500">G4</text><text x="620" y="500">G5</text><text x="740" y="500">G6</text><text x="860" y="500">G7</text></g>
+  </svg>
+  <div class="cap" style="position:relative">动态分镜：赭青双链缠绕上升——横档逐轮点亮，从「人审赭」渐成「AI 把关青」</div>
+</div>
+
+<h2>它讲什么</h2>
+<div class="story">
+  <p><b>一句话：</b>信任不是给出来的，是一轮一轮跑出来的——人机互相缠绕着上升。</p>
+  <p>某 30 人团队引入第一位「数字员工」：第一轮，运营总监林岸每步门禁亲自审——不是不信任，是信任还没有形状。跑通、沉淀、验收通过；第二轮，AI 的执行策略（AET）入了库，审核队列肉眼可见地变短；第 N 轮，工作流模板化——林岸只在 G1 和 G5 两道关签字，其余交给 Agent 把关。与此同时，团队的<b>资产面板</b>越来越厚：AET 策略、Memory 记忆、AES 规格，橙色的「自有」与青色的「生态」双双变长。</p>
+  <p>没有谁替代谁——人在螺旋上升中站得更高（从审每一步，到只设计关卡），AI 在螺旋中潜得更深（从只敢提议，到端到端交付），组织在这条螺旋里攒下抄不走的家底。</p>
+  <div class="quoteline">「我以为放手是失去控制。后来才明白——<b>每放一段，我就长高一段</b>。」<br><span style="font-size:12.5px;opacity:.7">—— 林岸，运营总监，S08</span></div>
+</div>
+  <p>工程师小满从「我会被换掉吗」的焦虑出发，走进 Rhea 的作战地图：她发现项目的最上方先浮起的不是任务，而是<b>自己的名字——委托人</b>。AI 要真实派活，得先过她手里的一次性令牌确认卡；团队揭榜干活，按她定下的判据验收；打好的仗沉淀成她的资产库。三个月后她指挥三支 AI 军团，名字牌比从前更亮。</p>
+  <p>另一边，为「想提效又怕担责」左右为难的创始人陈总，看到每一步操作都拖着一条归因链——<b>AI 每个动作都有人授权、有人验收</b>——眉头终于舒展：效率与责任，这次可以都要。</p>
+  <div class="quoteline">「它们没有抢走我的工作——它们把我的名字，抬到了更高的地方。」<br><span style="font-size:12.5px;opacity:.7">—— 小满，S11</span></div>
+</div>
+
+<h2>分镜精选（全片 12 镜 · 另有 60 秒速览版）</h2>
+<div class="frame">
+  <div class="shot"><div class="no">S04 · 关键帧</div><h3>第一轮：全链人审</h3><p>双螺旋初次点亮，每一道横档都是赭色（人审）。林岸在七道门前逐一签字——「不是不信你，是信任还没有形状。」</p></div>
+  <div class="shot"><div class="no">S08 · 关键帧</div><h3>资产面板变厚</h3><p>Dashboard One Paper 浮现：右翼六维资产条——AET 策略、Memory、AES——橙青两色逐轮变长。「每跑通一轮，家底厚一档。」</p></div>
+  <div class="shot"><div class="no">S12 · 收尾</div><h3>螺旋点题</h3><p>镜头拉远，双链螺旋升入云层，横档大多转为青色，唯 G1/G5 仍亮着赭色的人签。字幕：「AI 每证明一次，人就多放一段——这，就是上升的螺旋。」</p></div>
+</div>
+
+<h2>给谁看</h2>
+<p><b>给雇主</b>：渐进式授权不是「一次全放」也不是「永远不敢放」——每一轮放手都有上一轮的证据背书，风险随门禁受控。<br>
+<b>给经理</b>：参与深度随信任演化——从全链人审到只守关键关，队列越来越短，交付越来越快。<br>
+<b>给员工</b>：你的角色从「审每一步」升维到「设计关卡与判据」——AI 潜得越深，你的关卡越值钱。</p>
+
+<div class="actions">
+  <a class="btn btn--solid" href="helix.html">先看螺旋图解（五图）</a>
+  <a class="btn btn--ghost" href="rhea.html#helix">返回双螺旋模块</a>
+  <a class="btn btn--ghost" href="about.html#contact">影片上线通知我</a>
+</div>
+
+<footer>烁普智能 SHUOPU INTELLIGENCE · Rhea · Nexus · Mneme<br>完整剧本《上升的螺旋》存档于产品库 docs/marketing/</footer>
+</div>
+</body>
+</html>

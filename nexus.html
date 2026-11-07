@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexus · 企业级 AI 治理与分层记忆 | 烁普智能</title>
+<meta name="description" content="Nexus 帮企业自主治理自己的 Agent 与记忆：私有化部署、L0–L4 分层架构、提案—验证—仲裁治理闭环、五大行业适配器。让 AI 成为企业资产，而不是平台的租客。">
+<meta name="theme-color" content="#060B11">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23060B11'/%3E%3Cpath d='M16 5 L27 16 L16 27 L5 16 Z' fill='none' stroke='%23DDA45C' stroke-width='1.2'/%3E%3Ccircle cx='16' cy='16' r='2.4' fill='%23DDA45C'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<a class="skip" href="#main">跳到主要内容</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="烁普智能首页">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <path d="M16 4 L28 16 L16 28 L4 16 Z" stroke="#DDA45C" stroke-width="1"/>
+        <path d="M16 10 L22 16 L16 22 L10 16 Z" stroke="#DDA45C" stroke-width="0.8" opacity="0.45"/>
+        <circle cx="16" cy="16" r="2" fill="#DDA45C"/>
+      </svg>
+      <span class="brand-name">烁普智能<span>SHUOPU INTELLIGENCE</span></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="rhea.html">Rhea</a>
+      <a href="nexus.html" class="active">Nexus</a>
+      <a href="index.html#mneme">Mneme</a>
+      <a href="index.html#technology">技术</a>
+      <a href="about.html">公司</a>
+      <a class="nav-mobile-cta" href="about.html#contact">预约诊断 →</a>
+    </nav>
+    <a class="nav-cta" href="about.html#contact">预约诊断</a>
+    <button class="burger" aria-label="菜单" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="phero">
+  <div class="wrap">
+    <div class="eyebrow rv">Nexus · Enterprise AI Memory Infrastructure</div>
+    <h1 class="h-display rv rv-d1">AI 不该是平台的租客，<br>它该是企业的<span class="accent">资产</span></h1>
+    <p class="rv rv-d2">
+      Nexus 偏重让企业自主治理：私有化部署、L0–L4 分层记忆、提案—验证—仲裁的治理闭环——治理权在企业，底座由我们提供。
+      让高合规行业第一次可以真正把 AI 放进核心流程，而不是放在流程旁边。
+    </p>
+    <div class="chips rv rv-d3 mt-32">
+      <span class="chip">私有化 / 混合云</span>
+      <span class="chip">L0–L4 分层架构</span>
+      <span class="chip">决策可追溯</span>
+      <span class="chip">行业适配器</span>
+      <span class="chip">支持私有化合规部署</span>
+    </div>
+    <div class="hero-actions rv rv-d3">
+      <a class="btn btn--solid" href="about.html#contact">预约架构沟通
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8h11M9 3.5 13.5 8 9 12.5"/></svg>
+      </a>
+      <a class="btn btn--ghost" href="#architecture">看分层架构</a>
+    </div>
+  </div>
+</section>
+
+<!-- 问题 -->
+<section class="section section--xl">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow rv">01 / Why It Fails</div>
+        <h2 class="h1 rv rv-d1">企业级 AI 卡住的，<br>从来不是模型能力</h2>
+      </div>
+      <p class="rv rv-d2">
+        大模型已经够强了。真正难的是四件事：记忆、治理、合规、行业深度。
+        这四件事，通用工具一件都解决不了。
+      </p>
+    </div>
+
+    <div class="grid g4">
+      <div class="card rv">
+        <span class="idx">01 / SOVEREIGNTY</span>
+        <h3>数据主权</h3>
+        <p>金融、医疗、法律的核心数据不能出内网。而主流云厂商的记忆方案都是托管式——用了云，就交出了自主权。</p>
+      </div>
+      <div class="card rv rv-d1">
+        <span class="idx">02 / BLACK BOX</span>
+        <h3>决策黑盒</h3>
+        <p>监管要问“AI 为什么这么建议”，而 LLM 输出无引用、无路径、无回放。检查过不了，就上不了生产。</p>
+      </div>
+      <div class="card rv rv-d2">
+        <span class="idx">03 / NO MEMORY</span>
+        <h3>没有企业记忆</h3>
+        <p>通用模型不懂你这家律所过去十年审过什么、这家医院的用药习惯、这家银行的客户画像。</p>
+      </div>
+      <div class="card rv rv-d3">
+        <span class="idx">04 / UNGOVERNABLE</span>
+        <h3>集群不可治理</h3>
+        <p>多 Agent 协同时，谁负责、谁决策、谁兜底？没有治理机制的多 Agent 系统，是一颗定时炸弹。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main id="main" tabindex="-1">
+
+<!-- 全宽陈述段 · 落点 -->
+<section class="lede">
+  <div class="wrap">
+    <p class="statement statement--long rv">让高合规行业第一次<br>真正把 AI 放进核心流程，<br><span class="accent">而不是放在流程旁边</span>。</p>
+    <p class="lede-note rv rv-d1">
+      这四件事——记忆、治理、合规、行业深度——通用工具一件都解决不了。
+    </p>
+  </div>
+</section>
+
+<!-- 架构 -->
+<section class="section bg-2 section--line" id="architecture">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow rv">02 / Architecture</div>
+        <h2 class="h1 rv rv-d1">记忆要分层，<br>治理才有抓手</h2>
+      </div>
+      <p class="rv rv-d2">
+        把“一个通用大脑”拆成五层：铁律在最底下守着安全底线，
+        意义在最上面沉淀不可复制的私有资产。
+      </p>
+    </div>
+
+    <div class="split split--rev">
+      <div class="arch rv">
+        <div class="layer">
+          <span class="lv">L4</span>
+          <div><h4>行业智慧共享层</h4><p>经 Judge 判断与 Audit 审计后的高质量行业知识，支持跨行业迁移。</p></div>
+        </div>
+        <div class="layer">
+          <span class="lv">L3</span>
+          <div><h4>公共知识皮层</h4><p>跨 Agent 的共享记忆中枢。认知汇聚、共识形成、可被检索。</p></div>
+        </div>
+        <div class="layer">
+          <span class="lv">L2</span>
+          <div><h4>本地私有记忆</h4><p>企业内私有部署的记忆空间，数据主权 100% 属于企业。</p></div>
+        </div>
+        <div class="layer">
+          <span class="lv">L1</span>
+          <div><h4>个体海马体 + 认知编码</h4><p>每个 Agent 的私有记忆与结构化认知片段，精准检索与调用。</p></div>
+        </div>
+        <div class="layer layer--key">
+          <span class="lv">L0</span>
+          <div><h4>铁律层</h4><p>合规底线、安全边界与伦理约束。这一层不可被上层覆盖。</p></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="eyebrow rv">02.1 / Governance Triad</div>
+        <h3 class="h2 h2-sm rv rv-d1" style="margin:18px 0 18px">提案 · 验证 · 仲裁</h3>
+        <p class="body-sm rv rv-d2">
+          这是 Nexus 最深的护城河。它把 AI 的一次输出，变成一条带引用、带路径、
+          带置信度的完整因果链——高合规行业落地 AI 的硬门槛。
+        </p>
+        <div class="mgrid mgrid--col mt-32">
+          <div class="mcell rv">
+            <div class="flowline triad-head"><span class="accent">PROPOSAL · 提案者</span><span class="small mono">主动性</span></div>
+            <p class="small mt-16">Agent 主动提出决策建议，附引用记忆、推理路径与置信度。</p>
+          </div>
+          <div class="mcell rv rv-d1">
+            <div class="flowline triad-head"><span class="accent">VERIFIER · 验证者</span><span class="small mono">价值观锚定</span></div>
+            <p class="small mt-16">校验提案的合规性、安全性与伦理边界，锚定人类价值观。</p>
+          </div>
+          <div class="mcell rv rv-d2">
+            <div class="flowline triad-head"><span class="accent">ARBITER · 仲裁者</span><span class="small mono">冲突解决</span></div>
+            <p class="small mt-16">多 Agent 冲突时裁决最终输出，并记录完整因果链。</p>
+          </div>
+        </div>
+        <div class="note mt-24">
+          <strong>为什么是三元制：</strong>只靠一个模型自我审查，等于让它既当运动员又当裁判。
+          提案、验证、仲裁分开，责任才有落点。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 行业矩阵 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow rv">03 / Industry Kits</div>
+        <h2 class="h1 rv rv-d1">一次底座，<br>多次变现</h2>
+      </div>
+      <p class="rv rv-d2">
+        行业适配器是插件式的：同一套记忆与治理底座，接入不同的知识图谱、
+        合规规则与决策模式。先打透一两个，再复制，而不是从 PPT 开始铺。
+      </p>
+    </div>
+
+    <div class="tbl-wrap rv">
+      <table class="tbl tbl--wide">
+        <caption class="sr-only">五个行业适配器（法律、医疗、金融、客服、教育）的核心场景与关键差异化。</caption>
+        <thead>
+          <tr>
+            <th scope="col" style="width:20%">行业产品</th>
+            <th scope="col" style="width:42%">核心场景</th>
+            <th scope="col">关键差异化</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>LegalKit · 法律</td><td>合同审查 · 判例检索 · 诉讼策略 · 合规审计</td><td>律师—当事人特权保护 · 判例引用关系可视化</td></tr>
+          <tr><td>MedicalKit · 医疗</td><td>病历管理 · 用药安全 · 诊断辅助 · 隐私脱敏</td><td>72h 临时授权 · 跨科室会诊记忆共享</td></tr>
+          <tr><td>FinanceKit · 金融</td><td>客户画像 · 合规风控 · 智能投顾 · 反洗钱</td><td>SAR 报告自动生成 · 完整审计追溯链</td></tr>
+          <tr><td>ServiceKit · 客服</td><td>智能问答 · 工单分配 · 客户旅程 · 流失预测</td><td>多轮上下文连贯 · VIP 客户智能路由</td></tr>
+          <tr><td>EduKit · 教育</td><td>学习路径 · 个性推荐 · 知识图谱 · 教师助教</td><td>教育公平保障 · 学习漏洞可解释</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 案例 -->
+<section class="section bg-2 section--line">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <div class="eyebrow rv">04 / Case · Insurance Fraud</div>
+        <h2 class="h1 rv rv-d1 mt-24" style="margin-bottom:24px">单案正常，<br>关联之后才可疑</h2>
+        <p class="lead rv rv-d2">
+          真正的欺诈往往不发生在单张理赔单里，而发生在案件之间——
+          同一家修理厂、同一组医生、隐秘的亲属关系。
+        </p>
+        <p class="body-sm rv mt-24">
+          现有反欺诈工具大多做“单案分析”：检查这一单是否异常。Nexus 用关系图谱
+          跨案关联，把“单点检测”升级为“网络洞察”——ROI 直接体现为赔付损失降低。
+        </p>
+        <div class="flowline rv mt-32">
+          <span>单案检测</span><i>→</i><span>关系图谱</span><i>→</i><span>团伙识别</span><i>→</i><span>调查建议</span>
+        </div>
+        <p class="small rv mt-24">
+          跨案关联识别 · 已跑通“单案正常、关联可疑”的团伙形态
+        </p>
+      </div>
+      <div class="rv rv-d2">
+        <div class="console console--graph">
+          <div class="console-bar">
+            <span class="cpill"><i></i>GRAPH</span>
+            <span class="cbar-t">NEXUS / 关系图谱 · CASE 04-1187</span>
+            <span class="cbar-x">#04-1187</span>
+          </div>
+          <div class="console-body">
+            <div class="console-main">
+              <div class="tl-row"><span class="t">CASE</span><span class="d">理赔 04-1187 · 单案风险评分 0.21（正常）</span><span class="s ok">LOW</span></div>
+              <div class="tl-row"><span class="t">LINK</span><span class="d">关联 04-0932 / 04-1075 · 同一修理厂</span><span class="s gate">FOUND</span></div>
+              <div class="tl-row"><span class="t">LINK</span><span class="d">关联 03-2210 · 同一主治医生</span><span class="s gate">FOUND</span></div>
+              <div class="tl-row"><span class="t">GRAPH</span><span class="d">三点闭合 · 疑似团伙形态</span><span class="s gate">ALERT</span></div>
+              <div class="tl-row" style="border-bottom:0"><span class="t">TRACE</span><span class="d">证据链 · 引用 14 条记忆 · 置信度 0.87</span><span class="s ok">AUDITED</span></div>
+            </div>
+          </div>
+          <div class="console-foot"><span>GRAPH ON</span><span>MEMORY HIT 14</span><span>TRACE READY</span></div>
+        </div>
+        <p class="console-cap">演示数据 · 非真实客户案例</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 对比 · 纸面段（本页唯一的反相页）-->
+<section class="section sheet" id="compare">
+  <div class="wrap">
+    <div class="sheet-head">
+      <span>烁普智能 · 能力对照表</span>
+      <span class="sl">SHEET 05</span>
+    </div>
+
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow rv">05 / Not Another Cloud</div>
+        <h2 class="h1 rv rv-d1">我们不与云厂商<br>正面竞争</h2>
+      </div>
+      <p class="rv rv-d2">
+        云大厂做“托管记忆”（租），框架做“工作流编排”（拼），单案工具做“逐案筛查”（看单点）。
+        只有 Nexus 做“私有化 + 可治理 + 跨案关联”的记忆基础设施（拥有）。
+      </p>
+    </div>
+
+    <div class="tbl-wrap rv">
+      <table class="tbl tbl--wide tbl--hi-2">
+        <caption class="sr-only">Nexus 与云厂商、开源框架在部署模式、数据主权、行业适配深度、决策可追溯、Agent 全生命周期、合规适配、跨案关联图谱七个维度的对比。带 ✕ 的格子表示该维度不具备或需自行补建。</caption>
+        <thead>
+          <tr>
+            <th scope="col" style="width:20%">能力维度</th>
+            <th scope="col">Nexus</th>
+            <th scope="col">云厂商（AWS / Azure / 阿里云）</th>
+            <th scope="col">框架（LangChain 等）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>部署模式</td><td class="yes">私有化 + 混合云</td><td>云端托管</td><td>自行部署</td></tr>
+          <tr><td>数据主权</td><td class="yes">完全属于企业</td><td class="no"><span class="sr-only">不具备：</span><i class="mk" aria-hidden="true">✕</i>平台托管</td><td>视部署方式</td></tr>
+          <tr><td>行业适配深度</td><td class="yes">五大行业 Agent 集群</td><td class="no"><span class="sr-only">不具备：</span><i class="mk" aria-hidden="true">✕</i>通用能力</td><td class="no"><span class="sr-only">不具备：</span><i class="mk" aria-hidden="true">✕</i>需自行开发</td></tr>
+          <tr><td>决策可追溯</td><td class="yes">治理机制 + 完整审计链</td><td>部分支持</td><td class="no"><span class="sr-only">不具备：</span><i class="mk" aria-hidden="true">✕</i>无</td></tr>
+          <tr><td>Agent 全生命周期</td><td class="yes">完整治理能力</td><td>部分支持</td><td>基础编排</td></tr>
+          <tr><td>合规适配</td><td class="yes">私有化合规刚需</td><td class="no"><span class="sr-only">不具备：</span><i class="mk" aria-hidden="true">✕</i>依赖云平台合规</td><td class="no"><span class="sr-only">不具备：</span><i class="mk" aria-hidden="true">✕</i>需自行保证</td></tr>
+          <tr><td>跨案关联图谱</td><td class="yes">关系图谱 · 网络洞察</td><td class="no"><span class="sr-only">不具备：</span><i class="mk" aria-hidden="true">✕</i>无</td><td class="no"><span class="sr-only">不具备：</span><i class="mk" aria-hidden="true">✕</i>需自行开发</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tbl-legend rv">
+      <span><i class="mk" aria-hidden="true">✕</i>该维度不具备 / 需自行补建</span>
+      <span class="yes">赭色栏为本方方案</span>
+    </div>
+
+    <div class="folio">
+      <span>SHUOPU INTELLIGENCE · 能力对照</span>
+      <span>P. 05</span>
+    </div>
+  </div>
+</section>
+
+<!-- 部署 -->
+<section class="section bg-2 section--line">
+  <div class="wrap">
+    <div class="grid g3" style="gap:44px">
+      <div class="rv">
+        <div class="eyebrow">Deployment</div>
+        <h3 class="h3" style="margin:18px 0 12px">部署在企业自己的机房里</h3>
+        <p class="body-sm">Edge 本地部署 + 云端脱敏同步。核心数据不出内网，AI 资产完全属于企业自己的 IT 架构图。</p>
+      </div>
+      <div class="rv rv-d1">
+        <div class="eyebrow">Compliance</div>
+        <h3 class="h3" style="margin:18px 0 12px">合规不是事后补的</h3>
+        <p class="body-sm">审计链、权限分级、数据脱敏在架构层内置，系统部署在客户自己的合规边界内。</p>
+      </div>
+      <div class="rv rv-d2">
+        <div class="eyebrow">Integration</div>
+        <h3 class="h3" style="margin:18px 0 12px">插件式接入现有系统</h3>
+        <p class="body-sm">行业适配器可插拔，随 Enterprise 版提供本地化交付；不要求企业推翻已有 IT 架构。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <div class="eyebrow eyebrow--plain eyebrow--c rv">For Regulated Industries</div>
+    <h2 class="h1 rv rv-d1">如果数据不能出内网，<br>AI 还能不能用？</h2>
+    <p class="rv rv-d2">能。但要换一种架构。带上你的合规约束来，我们先判断可行性，再谈产品。</p>
+    <div class="cta-actions rv rv-d3">
+      <a class="btn btn--solid" href="mailto:wenlongcui@hotmail.com">预约架构沟通
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8h11M9 3.5 13.5 8 9 12.5"/></svg>
+      </a>
+      <a class="btn btn--ghost" href="index.html#technology">了解 AET 编排</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="index.html">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <path d="M16 4 L28 16 L16 28 L4 16 Z" stroke="#DDA45C" stroke-width="1"/>
+            <path d="M16 10 L22 16 L16 22 L10 16 Z" stroke="#DDA45C" stroke-width="0.8" opacity="0.45"/>
+            <circle cx="16" cy="16" r="2" fill="#DDA45C"/>
+          </svg>
+          <span class="brand-name">烁普智能<span>SHUOPU INTELLIGENCE</span></span>
+        </a>
+        <p>AI 治理基础设施。让企业敢把核心工作交给 AI。</p>
+      </div>
+      <div class="foot-col">
+        <h5>产品</h5>
+        <a href="rhea.html">Rhea · 团队级治理</a>
+        <a href="nexus.html">Nexus · 治理与分层记忆</a>
+        <a href="index.html#mneme">Mneme · 多层图谱记忆</a>
+        <a href="index.html#technology">AET · 战术文件</a>
+      </div>
+      <div class="foot-col">
+        <h5>公司</h5>
+        <a href="about.html">关于我们</a>
+        <a href="about.html#belief">信念与价值观</a>
+        <a href="index.html#team">团队</a>
+        <a href="about.html#contact">联系我们</a>
+      </div>
+      <div class="foot-col">
+        <h5>联系</h5>
+        <a href="mailto:wenlongcui@hotmail.com">wenlongcui@hotmail.com</a>
+        <a href="tel:18666023056">+86 186 6602 3056</a>
+        <span style="color:var(--muted)">中国</span>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© 2026 烁普智能 SHUOPU INTELLIGENCE</span>
+      <span>MEANING FIRST · TRUST BEFORE CONTRACT</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>
