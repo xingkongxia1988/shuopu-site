@@ -580,6 +580,15 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.28; letter-spacing: 0.01em; }
 .advisor { border: 0; padding: 26px 0 0; }
 .advisor h3 { font-size: 16px; }
 
+/* 2026-11-07：外部学术顾问降一档视觉权重。
+   只用 opacity / 字号，不引用任何颜色变量 —— 浅色与深色主题都自动成立。 */
+.advisor--quiet { opacity: 0.74; }
+.advisor--quiet h3 { font-size: 14px; }
+.advisor--quiet .idx { font-size: 10px; }
+.advisor--quiet p { font-size: 13px; line-height: 1.7; }
+.person--quiet { opacity: 0.78; }
+.person--quiet .nm { font-size: 15px; }
+
 /* stat */
 .stat { padding: 26px 0; border-top: 1px solid var(--line); }
 .stat .num {
