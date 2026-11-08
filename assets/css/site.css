@@ -893,6 +893,15 @@ button.chip.on { border-color: var(--amber); color: var(--amber-2); background: 
   border-bottom: 1px solid var(--line-3);
   line-height: 1.6;
 }
+/* 表头内的补充说明（口径/举例等），随 th 字号但去掉字距，避免与主标签抢读 */
+.tbl th .ts-note {
+  display: block;
+  margin-top: 3px;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--muted-2);
+}
 .tbl td {
   padding: 17px 16px;
   border-bottom: 1px solid var(--line);
